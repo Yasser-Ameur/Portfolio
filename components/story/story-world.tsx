@@ -198,13 +198,13 @@ export function StoryWorld() {
       </div>
 
       {/* travel controls */}
-      <div className="absolute inset-x-4 bottom-6 z-30 flex items-center justify-between sm:inset-x-8">
+      <div className="pointer-events-none absolute inset-x-4 bottom-6 z-30 flex items-center justify-between sm:inset-x-8">
         <button
           onClick={() => travelTo(index - 1)}
           disabled={index === 0 || phase === "travel"}
           aria-label="Previous milestone"
           className={cn(
-            "group flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
+            "group pointer-events-auto flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
             "hover:text-ember-bright disabled:pointer-events-none disabled:opacity-25"
           )}
         >
@@ -215,7 +215,7 @@ export function StoryWorld() {
         {isLast ? (
           <Link
             href="/projects"
-            className="group relative rounded-full border border-ember/40 px-6 py-2.5 font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ember-bright transition-colors duration-300 hover:border-ember hover:bg-ember/10 sm:px-8"
+            className="group pointer-events-auto relative rounded-full border border-ember/40 px-6 py-2.5 font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ember-bright transition-colors duration-300 hover:border-ember hover:bg-ember/10 sm:px-8"
           >
             Explore my projects
             <span className="ml-2 inline-block transition-transform duration-300 ease-out-soft group-hover:translate-x-1">→</span>
@@ -225,7 +225,7 @@ export function StoryWorld() {
             onClick={() => travelTo(index + 1)}
             aria-label="Next milestone"
             className={cn(
-              "group flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
+              "group pointer-events-auto flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
               "hover:text-ember-bright disabled:pointer-events-none disabled:opacity-25"
             )}
           >
