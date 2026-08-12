@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { WorldPlaceholder } from "@/components/world/world-placeholder";
+import { ProjectWorld } from "@/components/projects/project-world";
 
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Distributed systems, backend infrastructure, machine learning, and agentic AI — the systems Yasser Ameur builds.",
+    "Distributed search, notification platforms, agentic systems, event streaming, and the orchestration layer that ties them together — the systems Yasser Ameur builds.",
 };
 
 export default function ProjectsPage() {
-  return (
-    <WorldPlaceholder
-      title="Projects"
-      description="A world of connected systems — search engines, event streams, agent networks, and the orchestration layer that ties them together. Coming soon."
-    />
-  );
+  return <ProjectWorld />;
 }
