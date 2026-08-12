@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/* =============================================================
+   YASSER AMEUR — PORTFOLIO DESIGN SYSTEM
+   =============================================================
+   Direction: cinematic, atmospheric, nostalgic, game-like.
+   Restrained palette — the night environment carries the
+   richness; UI stays quiet and legible.
+
+   Z-INDEX HIERARCHY
+   -----------------
+   z-0    world layers (sky, stars, clouds, mountains, ground)
+   z-10   character layer
+   z-20   environment props / foreground layers
+   z-30   scene UI (menu, HUD, captions)
+   z-40   overlays (dialogs, detail views)
+   z-50   global controls (skip link, audio, home escape hatch)
+
+   MOTION SCALE
+   ------------
+   fast     120ms   micro-interactions
+   base     200ms   standard hovers/state
+   slow     400ms   panel/reveal transitions
+   world    900ms   in-world camera movement
+   cinematic 1400ms  scene transitions
+   ============================================================= */
+
+:root {
+  /* -- palette: night -------------------------------------------------- */
+  --night-950: #03050b;
+  --night-900: #060a14;
+  --night-800: #0a101f;
+  --night-700: #101a30;
+  --night-600: #1a2742;
+
+  /* -- palette: light -------------------------------------------------- */
+  --starlight: #f2ead9;
+  --starlight-dim: #a8a191;
+  --starlight-faint: #6f6b61;
+
+  /* -- palette: accents ------------------------------------------------ */
+  --ember: #d99a5b;
+  --ember-bright: #f0bd7d;
+  --alpine: #8fb3d9;
+  --glacier: #cfe0f0;
+  --terracotta: #c06a4a;
+  --sand: #dcb586;
+  --danger: #e2685f;
+
+  /* -- semantic --------------------------------------------------------- */
+  --background: var(--night-950);
+  --foreground: var(--starlight);
+
+  /* -- elevation -------------------------------------------------------- */
+  --shadow-panel: 0 24px 60px -24px rgb(0 0 0 / 0.6);
+  --shadow-glow: 0 0 24px rgb(217 154 91 / 0.25);
+  --shadow-hairline: 0 1px 0 rgb(255 255 255 / 0.06);
+
+  /* -- easing ----------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* -- radii ------------------------------------------------------------ */
+  --radius-ui: 0.75rem;
+  --radius-soft: 1.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-night-950: var(--night-950);
+  --color-night-900: var(--night-900);
+  --color-night-800: var(--night-800);
+  --color-night-700: var(--night-700);
+  --color-night-600: var(--night-600);
+
+  --color-starlight: var(--starlight);
+  --color-starlight-dim: var(--starlight-dim);
+  --color-starlight-faint: var(--starlight-faint);
+
+  --color-ember: var(--ember);
+  --color-ember-bright: var(--ember-bright);
+  --color-alpine: var(--alpine);
+  --color-glacier: var(--glacier);
+  --color-terracotta: var(--terracotta);
+  --color-sand: var(--sand);
+  --color-danger: var(--danger);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme inline {
+  --ease-out-expo: var(--ease-out-expo);
+  --ease-out-soft: var(--ease-out-soft);
+  --ease-spring: var(--ease-spring);
+
+  --shadow-panel: var(--shadow-panel);
+  --shadow-glow: var(--shadow-glow);
+  --shadow-hairline: var(--shadow-hairline);
+
+  --radius-ui: var(--radius-ui);
+  --radius-soft: var(--radius-soft);
+}
+
+@theme {
+  /* -- ambient keyframes ------------------------------------------------ */
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+  --animate-drift: drift 24s linear infinite;
+  --animate-pulse-soft: pulse-soft 3.2s ease-in-out infinite;
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes drift {
+    from {
+      transform: translateX(-10%);
+    }
+    to {
+      transform: translateX(110%);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.45;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgb(255 255 255 / 0.08);
+  }
+
+  html {
+    color-scheme: dark;
+    background-color: var(--background);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgb(217 154 91 / 0.35);
+    color: var(--starlight);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ember);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* quiet scrollbar to match the atmosphere */
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(255 255 255 / 0.12);
+      border-radius: 999px;
+      border: 3px solid transparent;
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(255 255 255 / 0.22);
+      border: 3px solid transparent;
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(255 255 255 / 0.18) transparent;
+    }
+  }
+
+  /* respect reduced-motion preferences globally */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* accessible text that is only announced to assistive tech */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
