@@ -49,23 +49,24 @@ Progress is tracked in phases. Each phase is committed with a meaningful convent
 - [x] Milestone 07 — Swiss mountains (closing scene, celebration)
 - [x] Story → Projects bridge
 
-## Phase 4 — Project World
+## Phase 4 — Project World ✅
 
-- [ ] Project world shell + navigation (arrows, keyboard, swipe, momentum)
-- [ ] Project 01 — MiniGoogle (distributed search engine: node graph, architecture inspector)
-- [ ] Project 02 — NotiFly (notification delivery pipeline)
-- [ ] Project 03 — NEXUS (agent constellation / orchestration graph)
-- [ ] Project 04 — Pulse (event stream visualization)
-- [ ] Project 05 — FlowOS (central orchestration graph connecting the ecosystem)
-- [ ] Supporting projects: StockFlow, ReCHor, others
-- [ ] Project detail views (architecture, decisions, tech, results, GitHub)
-- [ ] Structured project content model (`content/projects`)
+- [x] Project world shell + navigation (arrows, keyboard, swipe, momentum)
+- [x] Project 01 — MiniGoogle (distributed search engine: node graph, architecture inspector)
+- [x] Project 02 — NotiFly (notification delivery pipeline)
+- [x] Project 03 — NEXUS (agent constellation / orchestration graph)
+- [x] Project 04 — Pulse (event stream visualization)
+- [x] Project 05 — FlowOS (central orchestration graph connecting the ecosystem)
+- [x] Supporting projects: Deenii, API Management, ATLAS (StockFlow/ReCHor do not exist in the accounts — replaced with verified repos)
+- [x] Project detail views (architecture, decisions, tech, results, GitHub)
+- [x] Structured project content model (`content/projects`)
+- [x] All technical claims verified against source repositories before publishing
 
-## Phase 5 — Supporting Pages
+## Phase 5 — Supporting Pages ✅
 
-- [ ] About experience
-- [ ] Resume page
-- [ ] Contact (email, LinkedIn, GitHub)
+- [x] About experience
+- [x] Resume page
+- [x] Contact (email, LinkedIn, GitHub)
 
 ## Phase 6 — Responsive / Mobile
 
@@ -88,12 +89,12 @@ Progress is tracked in phases. Each phase is committed with a meaningful convent
 - [ ] Screen-reader labels and live regions
 - [ ] Reduced-motion parity (accessible fallback structure)
 
-## Phase 9 — SEO
+## Phase 9 — SEO ✅
 
-- [ ] Metadata, Open Graph, Twitter/X cards
-- [ ] Favicon set, canonical URL
-- [ ] Sitemap, robots, structured data
-- [ ] Deployment config for `yasserameur.me`
+- [x] Metadata, Open Graph, Twitter/X cards
+- [x] Favicon set, canonical URL
+- [x] Sitemap, robots, structured data
+- [x] Deployment config for `yasserameur.me`
 
 ## Phase 10 — Final Polish
 
