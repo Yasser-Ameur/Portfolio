@@ -10,15 +10,20 @@ import { cn } from "@/lib/utils";
 import { characterScale, StoryCharacter, type CharacterPose } from "./story-character";
 import { ChildhoodScene } from "./scenes/childhood-scene";
 import { MarrakechScene } from "./scenes/marrakech-scene";
+import { ProgrammingScene } from "./scenes/programming-scene";
+import { HighSchoolScene } from "./scenes/highschool-scene";
+import { FlightScene } from "./scenes/flight-scene";
+import { EpflScene } from "./scenes/epfl-scene";
+import { MountainsScene } from "./scenes/mountains-scene";
 
 const SCENES: ((props: { active: boolean }) => ReactNode)[] = [
   () => <ChildhoodScene />,
   () => <MarrakechScene />,
-  () => null,
-  () => null,
-  () => null,
-  () => null,
-  () => null,
+  ({ active }) => <ProgrammingScene active={active} />,
+  ({ active }) => <HighSchoolScene active={active} />,
+  ({ active }) => <FlightScene active={active} />,
+  ({ active }) => <EpflScene active={active} />,
+  ({ active }) => <MountainsScene active={active} />,
 ];
 
 function Caption({ milestone, visible }: { milestone: Milestone; visible: boolean }) {

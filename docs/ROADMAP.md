@@ -36,18 +36,18 @@ Progress is tracked in phases. Each phase is committed with a meaningful convent
 - [x] Cinematic transition primitive
 - [x] Vertical slice: home → one story environment → MiniGoogle world → home
 
-## Phase 3 — Story World
+## Phase 3 — Story World ✅
 
-- [ ] Side-scrolling story engine (canvas/scroll composition)
-- [ ] Character growth system (child → teenager → young adult)
-- [ ] Milestone 01 — Childhood (football, games, bedroom)
-- [ ] Milestone 02 — Morocco / Marrakech (travel transition, terracotta architecture)
-- [ ] Milestone 03 — Programming (desk, terminal, first code)
-- [ ] Milestone 04 — High school (valedictorian, quiet effort)
-- [ ] Milestone 05 — The airplane / Switzerland (cinematic transition)
-- [ ] Milestone 06 — EPFL (campus, engineering becomes serious)
-- [ ] Milestone 07 — Swiss mountains (closing scene, celebration)
-- [ ] Story → Projects bridge
+- [x] Side-scrolling story engine (canvas/scroll composition)
+- [x] Character growth system (child → teenager → young adult)
+- [x] Milestone 01 — Childhood (football, games, bedroom)
+- [x] Milestone 02 — Morocco / Marrakech (travel transition, terracotta architecture)
+- [x] Milestone 03 — Programming (desk, terminal, first code)
+- [x] Milestone 04 — High school (valedictorian, quiet effort)
+- [x] Milestone 05 — The airplane / Switzerland (cinematic transition)
+- [x] Milestone 06 — EPFL (campus, engineering becomes serious)
+- [x] Milestone 07 — Swiss mountains (closing scene, celebration)
+- [x] Story → Projects bridge
 
 ## Phase 4 — Project World
 
