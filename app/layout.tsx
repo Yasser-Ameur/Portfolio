@@ -54,12 +54,21 @@ export const metadata: Metadata = {
     title: "Yasser Ameur — Computer Science @ EPFL",
     description:
       "Yasser Ameur is a Computer Science student at EPFL building distributed systems, backend infrastructure, machine learning applications, and agentic AI systems.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Yasser Ameur — Computer Science @ EPFL",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Yasser Ameur — Computer Science @ EPFL",
     description:
       "Yasser Ameur is a Computer Science student at EPFL building distributed systems, backend infrastructure, machine learning applications, and agentic AI systems.",
+    images: ["/og.png"],
   },
   robots: {
     index: true,
@@ -84,6 +93,34 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main" className="relative min-h-full">
           <SceneTransitionProvider>{children}</SceneTransitionProvider>
         </main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Yasser Ameur",
+              url: "https://yasserameur.me",
+              jobTitle: "Computer Science Student",
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "École Polytechnique Fédérale de Lausanne",
+              },
+              knowsAbout: [
+                "Distributed Systems",
+                "Backend Engineering",
+                "Machine Learning",
+                "Information Retrieval",
+                "Agentic AI",
+                "Systems Architecture",
+              ],
+              sameAs: [
+                "https://github.com/Yasser-Ameur",
+                "https://linkedin.com/in/yasser-ameur",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
