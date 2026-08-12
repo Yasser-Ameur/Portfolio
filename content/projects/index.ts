@@ -3,7 +3,8 @@ export type ProjectWorldType =
   | "notifly"
   | "nexus"
   | "pulse"
-  | "flowos";
+  | "flowos"
+  | "satellite";
 
 export type DetailSection = {
   heading: string;
@@ -19,6 +20,7 @@ export type Project = {
   github: string;
   accent: string;
   worldType: ProjectWorldType;
+  pipeline: string[];
   detail: {
     why: string[];
     architecture: DetailSection;
@@ -45,6 +47,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Yasser-Ameur/minigoogle",
     accent: "var(--ember)",
     worldType: "minigoogle",
+    pipeline: ["Client", "Query Router", "Shards", "Retrieval", "Ranking"],
     detail: {
       why: [
         "I wanted to understand how search actually works — not from a tutorial, but by owning the whole pipeline end to end.",
@@ -93,6 +96,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Yasser-Ameur/notifly",
     accent: "var(--glacier)",
     worldType: "notifly",
+    pipeline: ["Event", "Notification", "Outbox", "Provider", "Delivery"],
     detail: {
       why: [
         "Sending a message is easy; not losing it is hard. I wanted delivery guarantees and provider extensibility to be first-class, not afterthoughts.",
@@ -136,6 +140,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Project-Nexus-YR/NEXUS",
     accent: "var(--alpine)",
     worldType: "nexus",
+    pipeline: ["Agent", "Tools", "Knowledge", "Workflow", "Result"],
     detail: {
       why: [
         "The interesting frontier for agents isn't chat — it's reliable knowledge work: planning, executing, critiquing, and synthesizing with durable, inspectable state.",
@@ -180,6 +185,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Yasser-Ameur/pulse",
     accent: "var(--terracotta)",
     worldType: "pulse",
+    pipeline: ["Producer", "Partitions", "Consumers"],
     detail: {
       why: [
         "I wanted a message broker I owned from the log format up — fsync, segments, recovery, and the wire protocol — instead of consuming a hosted one.",
@@ -220,6 +226,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Yasser-Ameur/flow-os",
     accent: "var(--sand)",
     worldType: "flowos",
+    pipeline: ["Workflow", "Compile", "Plan", "Execute", "Resume"],
     detail: {
       why: [
         "Automation tools usually force you into their model. I wanted a workflow platform where the engine compiles a validated plan, the domain stays pure, and any plugin can plug in through an SDK.",
@@ -249,6 +256,125 @@ export const PROJECTS: Project[] = [
       learned: [
         "Compiling a workflow once, instead of interpreting it per step, is what makes an engine fast and auditable.",
         "A plugin SDK with entry-point discovery turns a platform from a feature set into an ecosystem.",
+      ],
+    },
+  },
+  {
+    slug: "deenii",
+    name: "Deenii",
+    tagline: "An Islamic lifestyle companion, built for fourteen languages",
+    description:
+      "A fully client-side mobile app combining Quran reading with synchronized audio, computed prayer times, a Qibla compass, and habit streaks — no backend at all.",
+    technologies: ["TypeScript", "React", "Vite", "Capacitor", "adhan", "hijri-converter", "framer-motion"],
+    github: "https://github.com/Yasser-Ameur/Deenii",
+    accent: "var(--glacier)",
+    worldType: "satellite",
+    pipeline: ["Quran Reader", "Prayer Times", "Qibla", "Streaks", "14 Locales"],
+    detail: {
+      why: [
+        "I wanted to prove a full mobile product can be built without a backend — everything computed locally, offline-friendly, and shipped through Capacitor.",
+        "Localizing to fourteen languages forced me to treat i18n as architecture, not an afterthought.",
+      ],
+      architecture: {
+        heading: "Fully client-side, service-oriented modules",
+        points: [
+          "Quran reader with synchronized audio playback and per-surah navigation.",
+          "Prayer times computed locally with adhan and a fallback API path; hijri dates via hijri-converter.",
+          "AR-style Qibla compass using great-circle bearing math against the device sensors.",
+          "Streak tracking and a focus-mode challenge lock screen for habit discipline.",
+          "A 14-locale i18n layer covering the full interface.",
+        ],
+      },
+      decisions: [
+        "Client-only by design — all data ships as bundled/CDN datasets, so there is no server to operate.",
+        "React + Vite with Capacitor for the Android shell, keeping the web and native builds on one codebase.",
+      ],
+      technology: ["TypeScript", "React 19", "Vite", "Capacitor", "adhan", "hijri-converter", "framer-motion", "lucide-react"],
+      results: [
+        "Fourteen supported languages across the interface.",
+        "Quran reading with audio sync, local prayer computation, Qibla direction, and streak tracking in one app.",
+        "A working Android build target via Capacitor.",
+      ],
+      learned: [
+        "Capacitor + a carefully structured client app can deliver a native-feeling product with a fraction of the moving parts.",
+        "i18n done early is cheap; retrofitting it is expensive.",
+      ],
+    },
+  },
+  {
+    slug: "api-management",
+    name: "API Management",
+    tagline: "A five-service platform for API governance",
+    description:
+      "A microservices platform for managing API definitions, change-request workflows, and file uploads — Spring Boot 3 gateways and services behind a React client.",
+    technologies: ["Java 21", "Spring Boot 3", "Spring Cloud Gateway", "JWT / RBAC", "PostgreSQL", "Flyway", "React"],
+    github: "https://github.com/Yasser-Ameur/api-management",
+    accent: "var(--terracotta)",
+    worldType: "satellite",
+    pipeline: ["Gateway", "Auth", "API Service", "Modifications", "Uploads"],
+    detail: {
+      why: [
+        "API catalogs rot without governance. I wanted a platform where definitions, change requests, and uploads each have an owner service and a clean path through the system.",
+      ],
+      architecture: {
+        heading: "Independent services behind one gateway",
+        points: [
+          "Spring Cloud Gateway routes to auth, API-definition, modification-request, and file-upload services.",
+          "JWT-based authentication with role-based access control across services.",
+          "PostgreSQL per service with Flyway-managed migrations (V1–V10 in the modification service).",
+          "A React client with dedicated pages for each workflow area.",
+        ],
+      },
+      decisions: [
+        "Maven multi-module layout so each service stays independently buildable.",
+        "Audit logging and scheduled cleanup of stale uploads as first-class operational concerns.",
+      ],
+      technology: ["Java 21", "Spring Boot 3.4", "Spring Cloud Gateway", "Spring Security", "Spring Data JPA", "PostgreSQL", "Flyway", "Maven", "React 18"],
+      results: [
+        "Five cooperating services: api-gateway, auth-service, ms-api, ms-modification, ms-fileupload.",
+        "React frontend covering the governance workflows.",
+      ],
+      learned: [
+        "Gateway-first architecture centralizes security and routing, but every service must still enforce its own authorization.",
+        "Flyway migrations are the discipline that keeps schema evolution safe across services.",
+      ],
+    },
+  },
+  {
+    slug: "atlas",
+    name: "ATLAS",
+    tagline: "Studying long-term memory for coding agents",
+    description:
+      "A research platform for adaptive long-term memory in autonomous software-engineering agents, built around a biologically-inspired Knowledge Evolution Engine and a Neo4j knowledge graph.",
+    technologies: ["Python", "Neo4j", "Qdrant", "PostgreSQL", "Spreading Activation", "SWE-bench"],
+    github: "https://github.com/Yasser-Ameur/atlas",
+    accent: "var(--alpine)",
+    worldType: "satellite",
+    pipeline: ["Agents", "Memory Store", "Consolidation", "Evaluation"],
+    detail: {
+      why: [
+        "Agents forget. I wanted to study whether a knowledge graph with utility-based forgetting and spreading-activation retrieval lets a coding agent keep what matters across sessions.",
+      ],
+      architecture: {
+        heading: "A documented memory pipeline around a knowledge graph",
+        points: [
+          "A Knowledge Evolution Engine with a reflect → pattern-discover → concept-create → graph-update → compress consolidation pipeline.",
+          "Neo4j knowledge graph storage with Qdrant vectors and PostgreSQL for supporting state.",
+          "Spreading-activation retrieval and utility-based forgetting over stored memory.",
+          "Evaluation scaffolding on SWE-bench for measuring memory's effect on agent performance.",
+        ],
+      },
+      decisions: [
+        "An explicitly honest early-stage prototype — core algorithms are documented and scaffolded rather than overclaimed.",
+        "W&B-linked experiment tracking and strict lint/type-check tooling (Ruff, mypy).",
+      ],
+      technology: ["Python 3.10+", "Neo4j 5.20", "Qdrant", "PostgreSQL", "Pydantic v2", "W&B", "Docker Compose"],
+      results: [
+        "A documented, runnable research scaffold with the consolidation pipeline and evaluation harness in place.",
+      ],
+      learned: [
+        "Memory engineering is a pipeline, not a vector store — what to forget is as important as what to retrieve.",
+        "Honest staging (what is implemented vs. what is planned) is what makes research infrastructure trustworthy.",
       ],
     },
   },

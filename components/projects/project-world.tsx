@@ -12,14 +12,31 @@ import { MiniGoogleWorld } from "./visualizers/minigoogle-world";
 import { NexusWorld } from "./visualizers/nexus-world";
 import { NotiFlyWorld } from "./visualizers/notifly-world";
 import { PulseWorld } from "./visualizers/pulse-world";
+import { SatelliteWorld } from "./visualizers/satellite-world";
 
-const WORLDS: Record<string, (props: { active: boolean }) => React.ReactNode> = {
-  minigoogle: ({ active }) => <MiniGoogleWorld active={active} />,
-  notifly: ({ active }) => <NotiFlyWorld active={active} />,
-  nexus: ({ active }) => <NexusWorld active={active} />,
-  pulse: ({ active }) => <PulseWorld active={active} />,
-  flowos: ({ active }) => <FlowOSWorld active={active} />,
-};
+function World({ project, active }: { project: Project; active: boolean }) {
+  switch (project.worldType) {
+    case "minigoogle":
+      return <MiniGoogleWorld active={active} />;
+    case "notifly":
+      return <NotiFlyWorld active={active} />;
+    case "nexus":
+      return <NexusWorld active={active} />;
+    case "pulse":
+      return <PulseWorld active={active} />;
+    case "flowos":
+      return <FlowOSWorld active={active} />;
+    case "satellite":
+      return (
+        <SatelliteWorld
+          name={project.name}
+          pipeline={project.pipeline}
+          accent={project.accent}
+          active={active}
+        />
+      );
+  }
+}
 
 function Identity({ project, visible }: { project: Project; visible: boolean }) {
   return (
@@ -168,7 +185,6 @@ export function ProjectWorld() {
   }, [travelTo]);
 
   const project = PROJECTS[index];
-  const World = WORLDS[project.worldType];
 
   return (
     <div
@@ -201,7 +217,7 @@ export function ProjectWorld() {
           transition={{ duration: 0.55, ease: EASINGS.outExpo }}
           className="absolute inset-0"
         >
-          <World active={phase === "settled"} />
+          <World project={project} active={phase === "settled"} />
         </motion.div>
       </AnimatePresence>
 
@@ -221,7 +237,7 @@ export function ProjectWorld() {
       <div className="absolute inset-x-0 top-0 bottom-[30%] z-10 sm:bottom-[32%]" />
 
       {/* identity */}
-      <div className="absolute inset-x-0 bottom-9 z-30 flex justify-center px-6 sm:bottom-12">
+      <div className="pointer-events-none absolute inset-x-0 bottom-9 z-30 flex justify-center px-6 sm:bottom-12">
         <AnimatePresence mode="wait">
           <Identity key={project.slug} project={project} visible={phase === "settled"} />
         </AnimatePresence>
@@ -244,13 +260,13 @@ export function ProjectWorld() {
       </div>
 
       {/* travel controls */}
-      <div className="absolute inset-x-4 bottom-7 z-30 flex items-center justify-between sm:inset-x-8">
+      <div className="pointer-events-none absolute inset-x-4 bottom-7 z-30 flex items-center justify-between sm:inset-x-8">
         <button
           onClick={() => travelTo(index - 1)}
           disabled={index === 0 || phase === "travel"}
           aria-label="Previous project"
           className={cn(
-            "group flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
+            "group pointer-events-auto flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
             "hover:text-ember-bright disabled:pointer-events-none disabled:opacity-25"
           )}
         >
@@ -264,7 +280,7 @@ export function ProjectWorld() {
           disabled={index === PROJECTS.length - 1 || phase === "travel"}
           aria-label="Next project"
           className={cn(
-            "group flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
+            "group pointer-events-auto flex items-center gap-2 rounded-sm px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-starlight-dim transition-colors duration-200",
             "hover:text-ember-bright disabled:pointer-events-none disabled:opacity-25"
           )}
         >

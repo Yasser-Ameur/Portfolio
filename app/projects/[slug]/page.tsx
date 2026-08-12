@@ -11,14 +11,6 @@ export function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.slug }));
 }
 
-const PIPELINES: Record<string, string[]> = {
-  minigoogle: ["Client", "Query Router", "Shards", "Retrieval", "Ranking"],
-  notifly: ["Event", "Notification", "Outbox", "Provider", "Delivery"],
-  nexus: ["Agent", "Tools", "Knowledge", "Workflow", "Result"],
-  pulse: ["Producer", "Partitions", "Consumers"],
-  flowos: ["Workflow", "Compile", "Plan", "Execute", "Resume"],
-};
-
 export async function generateMetadata({
   params,
 }: {
@@ -107,7 +99,7 @@ export default async function ProjectDetailPage({
 
         <div className="mt-10">
           <PipelineStrip
-            labels={PIPELINES[project.worldType]}
+            labels={project.pipeline}
             accent={project.accent}
           />
         </div>
