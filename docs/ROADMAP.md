@@ -25,16 +25,16 @@ Progress is tracked in phases. Each phase is committed with a meaningful convent
 - [x] Core UI primitives (`cn` helper, base `Button`)
 - [x] SEO metadata foundation
 
-## Phase 2 — Home World
+## Phase 2 — Home World ✅
 
-- [ ] Cinematic night-sky scene (procedural canvas: stars, parallax, moon, clouds)
-- [ ] Stargazing character (SVG silhouette, subtle idle motion)
-- [ ] Shooting stars and ambient particle layer
-- [ ] Title treatment
-- [ ] In-scene main menu (`MY STORY`, `PROJECTS`, `ABOUT`, `CONTACT`)
-- [ ] Menu hover lighting/interaction
-- [ ] Cinematic transition primitive
-- [ ] Vertical slice: home → one story environment → MiniGoogle world → home
+- [x] Cinematic night-sky scene (procedural canvas: stars, parallax, moon, clouds)
+- [x] Stargazing character (SVG silhouette, subtle idle motion)
+- [x] Shooting stars and ambient particle layer
+- [x] Title treatment
+- [x] In-scene main menu (`MY STORY`, `PROJECTS`, `ABOUT`, `CONTACT`)
+- [x] Menu hover lighting/interaction
+- [x] Cinematic transition primitive
+- [x] Vertical slice: home → one story environment → MiniGoogle world → home
 
 ## Phase 3 — Story World
 
