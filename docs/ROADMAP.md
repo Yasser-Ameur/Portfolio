@@ -10,7 +10,7 @@ Progress is tracked in phases. Each phase is committed with a meaningful convent
 
 ## Phase 0 — Repository + Tooling ✅
 
-- [x] Create GitHub repository `Yasser-Ameur-Dev/Portfolio` (public, `origin` remote)
+- [x] Create GitHub repository `Yasser-Ameur/Portfolio` (public, `origin` remote)
 - [x] Initialize git repo on branch `main`
 - [x] Scaffold Next.js 16 + TypeScript + Tailwind CSS v4 + ESLint (App Router, no `src/`)
 - [x] Install core dependencies: `motion`, `clsx`, `tailwind-merge`

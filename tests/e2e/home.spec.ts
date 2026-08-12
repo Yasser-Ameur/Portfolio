@@ -2,11 +2,11 @@ const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
 
-const SHOTS = path.join(__dirname, "..", "..", "artifacts");
+const SHOTS = path.join(process.cwd(), "artifacts");
 
 test.describe.configure({ mode: "serial" });
 
-test("home world renders and navigates", async ({ page }, testInfo) => {
+test("home world renders and navigates", async ({ page }) => {
   const errors = [];
   page.on("console", (msg) => {
     if (msg.type() === "error") errors.push(msg.text());
@@ -27,30 +27,25 @@ test("home world renders and navigates", async ({ page }, testInfo) => {
   fs.mkdirSync(SHOTS, { recursive: true });
   await page.screenshot({ path: path.join(SHOTS, "home.png") });
 
-  // hover the first menu option
   await page.getByRole("link", { name: /My Story/i }).hover();
   await page.waitForTimeout(500);
   await page.screenshot({ path: path.join(SHOTS, "home-hover.png") });
 
-  // navigate into the story world
   await page.getByRole("link", { name: /My Story/i }).click();
   await page.waitForTimeout(2200);
   await expect(page).toHaveURL(/\/story/);
   await page.screenshot({ path: path.join(SHOTS, "story.png") });
 
-  // ESC returns home
   await page.keyboard.press("Escape");
   await page.waitForTimeout(2200);
   await expect(page).toHaveURL(/\/$/);
   await page.screenshot({ path: path.join(SHOTS, "home-return.png") });
 
-  // into projects
   await page.getByRole("link", { name: /Projects/i }).click();
   await page.waitForTimeout(2200);
   await expect(page).toHaveURL(/\/projects/);
   await page.screenshot({ path: path.join(SHOTS, "projects.png") });
 
-  // HUD home control
   await page.getByRole("link", { name: /Return home/i }).click();
   await page.waitForTimeout(2200);
   await expect(page).toHaveURL(/\/$/);
@@ -58,7 +53,31 @@ test("home world renders and navigates", async ({ page }, testInfo) => {
   expect(errors).toEqual([]);
 });
 
-test("mobile composition", async ({ browser }, testInfo) => {
+test("story world travels between milestones", async ({ page }) => {
+  await page.goto("/story");
+  await page.waitForTimeout(2200);
+
+  await expect(page.getByText(/It started with curiosity/i)).toBeVisible();
+
+  await page.locator("[data-football]").click({ force: true });
+  await page.waitForTimeout(400);
+
+  await page.getByRole("button", { name: /Next milestone/i }).click();
+  await page.waitForTimeout(4000);
+  await expect(page.getByText(/Morocco shaped where I came from/i)).toBeVisible();
+
+  await page.getByRole("button", { name: /Previous milestone/i }).click();
+  await page.waitForTimeout(4000);
+  await expect(page.getByText(/It started with curiosity/i)).toBeVisible();
+
+  await page.keyboard.press("ArrowRight");
+  await page.waitForTimeout(4000);
+  await expect(page.getByText(/Morocco shaped where I came from/i)).toBeVisible();
+
+  await page.screenshot({ path: path.join(SHOTS, "story-marrakech.png") });
+});
+
+test("mobile composition", async ({ browser }) => {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
   const page = await ctx.newPage();
   const errors = [];

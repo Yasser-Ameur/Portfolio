@@ -15,6 +15,6 @@ export const DURATION = {
 export const SITE = {
   name: "Yasser Ameur",
   url: "https://yasserameur.me",
-  github: "https://github.com/Yasser-Ameur-Dev",
+  github: "https://github.com/Yasser-Ameur",
   epfl: "École Polytechnique Fédérale de Lausanne",
 } as const;

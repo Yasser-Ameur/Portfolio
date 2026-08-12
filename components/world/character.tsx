@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
+import { usePrefersReducedMotion } from "@/lib/animation/use-prefers-reduced-motion";
 import { cn } from "@/lib/utils";
 
 const BODY = "#05070f";
@@ -11,7 +12,7 @@ const RIM = "rgba(240,189,125,0.55)";
  * Pure original SVG silhouette — no external assets.
  */
 export function Character({ className }: { className?: string }) {
-  const reduced = useReducedMotion();
+  const reduced = usePrefersReducedMotion();
 
   return (
     <div

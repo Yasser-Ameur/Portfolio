@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { WorldPlaceholder } from "@/components/world/world-placeholder";
+import { StoryWorld } from "@/components/story/story-world";
 
 export const metadata: Metadata = {
   title: "Story",
@@ -8,10 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function StoryPage() {
-  return (
-    <WorldPlaceholder
-      title="My Story"
-      description="A side-scrolling journey through a life — from a curious child in Marrakech to an engineer under Swiss skies. Coming soon."
-    />
-  );
+  return <StoryWorld />;
 }
