@@ -45,10 +45,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated assets (character extraction, environment panels)
-/public/characters
-/public/env
-/character/manifest.generated.ts
+# generated assets — source sheets are gitignored, but extracted runtime
+# sprites and the manifest MUST be committed so the production build works.
+# See scripts/extract-character.mjs and scripts/extract-environment.mjs.
 
 # generated screenshots and sequences
 /shots

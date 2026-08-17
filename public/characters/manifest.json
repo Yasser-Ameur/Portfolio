@@ -1,0 +1,1046 @@
+{
+  "generated": "2026-08-15T20:07:54.777Z",
+  "eras": {
+    "childhood": {
+      "label": "ERA_01_CHILDHOOD",
+      "ageRange": "7-9",
+      "sources": [
+        "ChatGPT Image 15 août 2026, 18_50_51.png"
+      ],
+      "orientation": {
+        "front": {
+          "src": "/characters/childhood/orientation/front.png",
+          "w": 147,
+          "h": 377,
+          "baseline": 376,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9973474801061007
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 193,
+            "y": 61
+          }
+        },
+        "threeQuarter": {
+          "src": "/characters/childhood/orientation/threeQuarter.png",
+          "w": 140,
+          "h": 379,
+          "baseline": 378,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9973614775725593
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 527,
+            "y": 61
+          }
+        },
+        "side": {
+          "src": "/characters/childhood/orientation/side.png",
+          "w": 108,
+          "h": 377,
+          "baseline": 376,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9973474801061007
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 862,
+            "y": 61
+          }
+        },
+        "back": {
+          "src": "/characters/childhood/orientation/back.png",
+          "w": 141,
+          "h": 379,
+          "baseline": 378,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9973614775725593
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 1167,
+            "y": 61
+          }
+        }
+      },
+      "stance": {
+        "idle": {
+          "src": "/characters/childhood/stance/idle.png",
+          "w": 149,
+          "h": 287,
+          "baseline": 286,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9965156794425087
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 256,
+            "y": 496
+          }
+        },
+        "walk": {
+          "src": "/characters/childhood/stance/walk.png",
+          "w": 173,
+          "h": 283,
+          "baseline": 282,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9964664310954063
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 649,
+            "y": 501
+          }
+        },
+        "run": {
+          "src": "/characters/childhood/stance/run.png",
+          "w": 243,
+          "h": 284,
+          "baseline": 283,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9964788732394366
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 999,
+            "y": 501
+          }
+        }
+      },
+      "expression": {
+        "neutral": {
+          "src": "/characters/childhood/expression/neutral.png",
+          "w": 133,
+          "h": 167,
+          "baseline": 166,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9940119760479041
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 135,
+            "y": 841
+          }
+        },
+        "curiosity": {
+          "src": "/characters/childhood/expression/curiosity.png",
+          "w": 133,
+          "h": 170,
+          "baseline": 169,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941176470588236
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 360,
+            "y": 838
+          }
+        },
+        "concentration": {
+          "src": "/characters/childhood/expression/concentration.png",
+          "w": 131,
+          "h": 167,
+          "baseline": 166,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9940119760479041
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 591,
+            "y": 841
+          }
+        },
+        "happiness": {
+          "src": "/characters/childhood/expression/happiness.png",
+          "w": 132,
+          "h": 167,
+          "baseline": 166,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9940119760479041
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 816,
+            "y": 841
+          }
+        },
+        "determination": {
+          "src": "/characters/childhood/expression/determination.png",
+          "w": 131,
+          "h": 167,
+          "baseline": 166,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9940119760479041
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 1039,
+            "y": 841
+          }
+        },
+        "wonder": {
+          "src": "/characters/childhood/expression/wonder.png",
+          "w": 129,
+          "h": 167,
+          "baseline": 166,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9940119760479041
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_50_51.png",
+            "x": 1256,
+            "y": 841
+          }
+        }
+      }
+    },
+    "earlyTeen": {
+      "label": "ERA_02_EARLY_TEEN",
+      "ageRange": "11-13",
+      "sources": [
+        "ChatGPT Image 15 août 2026, 19_01_12.png"
+      ],
+      "orientation": {
+        "front": {
+          "src": "/characters/earlyTeen/orientation/front.png",
+          "w": 152,
+          "h": 394,
+          "baseline": 393,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9974619289340102
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 114,
+            "y": 37
+          }
+        },
+        "threeQuarter": {
+          "src": "/characters/earlyTeen/orientation/threeQuarter.png",
+          "w": 142,
+          "h": 398,
+          "baseline": 397,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9974874371859297
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 396,
+            "y": 36
+          }
+        },
+        "side": {
+          "src": "/characters/earlyTeen/orientation/side.png",
+          "w": 118,
+          "h": 395,
+          "baseline": 394,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9974683544303797
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 678,
+            "y": 37
+          }
+        },
+        "back": {
+          "src": "/characters/earlyTeen/orientation/back.png",
+          "w": 146,
+          "h": 395,
+          "baseline": 394,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9974683544303797
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 913,
+            "y": 36
+          }
+        }
+      },
+      "stance": {
+        "idle": {
+          "src": "/characters/earlyTeen/stance/idle.png",
+          "w": 125,
+          "h": 302,
+          "baseline": 301,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9966887417218543
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 143,
+            "y": 447
+          }
+        },
+        "walk": {
+          "src": "/characters/earlyTeen/stance/walk.png",
+          "w": 185,
+          "h": 298,
+          "baseline": 296,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9932885906040269
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 440,
+            "y": 449
+          }
+        },
+        "run": {
+          "src": "/characters/earlyTeen/stance/run.png",
+          "w": 242,
+          "h": 292,
+          "baseline": 291,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9965753424657534
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 773,
+            "y": 453
+          }
+        }
+      },
+      "expression": {
+        "neutral": {
+          "src": "/characters/earlyTeen/expression/neutral.png",
+          "w": 130,
+          "h": 171,
+          "baseline": 170,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941520467836257
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 59,
+            "y": 793
+          }
+        },
+        "curiosity": {
+          "src": "/characters/earlyTeen/expression/curiosity.png",
+          "w": 130,
+          "h": 173,
+          "baseline": 172,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9942196531791907
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 251,
+            "y": 791
+          }
+        },
+        "concentration": {
+          "src": "/characters/earlyTeen/expression/concentration.png",
+          "w": 130,
+          "h": 170,
+          "baseline": 169,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941176470588236
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 434,
+            "y": 794
+          }
+        },
+        "happiness": {
+          "src": "/characters/earlyTeen/expression/happiness.png",
+          "w": 127,
+          "h": 171,
+          "baseline": 170,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941520467836257
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 623,
+            "y": 793
+          }
+        },
+        "determination": {
+          "src": "/characters/earlyTeen/expression/determination.png",
+          "w": 129,
+          "h": 171,
+          "baseline": 170,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941520467836257
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 809,
+            "y": 793
+          }
+        },
+        "wonder": {
+          "src": "/characters/earlyTeen/expression/wonder.png",
+          "w": 127,
+          "h": 171,
+          "baseline": 170,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9941520467836257
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_01_12.png",
+            "x": 1001,
+            "y": 793
+          }
+        }
+      }
+    },
+    "highSchool": {
+      "label": "ERA_03_HIGH_SCHOOL",
+      "ageRange": "15-18",
+      "sources": [
+        "ChatGPT Image 15 août 2026, 19_07_58.png"
+      ],
+      "orientation": {
+        "front": {
+          "src": "/characters/highSchool/orientation/front.png",
+          "w": 131,
+          "h": 403,
+          "baseline": 402,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9975186104218362
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 135,
+            "y": 59
+          }
+        },
+        "threeQuarter": {
+          "src": "/characters/highSchool/orientation/threeQuarter.png",
+          "w": 130,
+          "h": 404,
+          "baseline": 403,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9975247524752475
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 413,
+            "y": 60
+          }
+        },
+        "side": {
+          "src": "/characters/highSchool/orientation/side.png",
+          "w": 101,
+          "h": 402,
+          "baseline": 401,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9975124378109452
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 701,
+            "y": 60
+          }
+        },
+        "back": {
+          "src": "/characters/highSchool/orientation/back.png",
+          "w": 129,
+          "h": 402,
+          "baseline": 401,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9975124378109452
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 946,
+            "y": 60
+          }
+        }
+      },
+      "stance": {
+        "idle": {
+          "src": "/characters/highSchool/stance/idle.png",
+          "w": 105,
+          "h": 281,
+          "baseline": 280,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.99644128113879
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 189,
+            "y": 522
+          }
+        },
+        "walk": {
+          "src": "/characters/highSchool/stance/walk.png",
+          "w": 169,
+          "h": 279,
+          "baseline": 278,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.996415770609319
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 469,
+            "y": 523
+          }
+        },
+        "run": {
+          "src": "/characters/highSchool/stance/run.png",
+          "w": 223,
+          "h": 261,
+          "baseline": 260,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9961685823754789
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 785,
+            "y": 524
+          }
+        }
+      },
+      "expression": {
+        "neutral": {
+          "src": "/characters/highSchool/expression/neutral.png",
+          "w": 131,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 47,
+            "y": 820
+          }
+        },
+        "curiosity": {
+          "src": "/characters/highSchool/expression/curiosity.png",
+          "w": 132,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 234,
+            "y": 820
+          }
+        },
+        "concentration": {
+          "src": "/characters/highSchool/expression/concentration.png",
+          "w": 132,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 425,
+            "y": 820
+          }
+        },
+        "happiness": {
+          "src": "/characters/highSchool/expression/happiness.png",
+          "w": 131,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 615,
+            "y": 820
+          }
+        },
+        "determination": {
+          "src": "/characters/highSchool/expression/determination.png",
+          "w": 132,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 805,
+            "y": 820
+          }
+        },
+        "wonder": {
+          "src": "/characters/highSchool/expression/wonder.png",
+          "w": 131,
+          "h": 154,
+          "baseline": 153,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9935064935064936
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_07_58.png",
+            "x": 996,
+            "y": 820
+          }
+        }
+      }
+    },
+    "graduation": {
+      "label": "ERA_04_GRADUATION",
+      "ageRange": "17-18",
+      "sources": [
+        "ChatGPT Image 15 août 2026, 19_26_07.png"
+      ],
+      "orientation": {
+        "front": {
+          "src": "/characters/graduation/orientation/front.png",
+          "w": 189,
+          "h": 446,
+          "baseline": 445,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9977578475336323
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 163,
+            "y": 16
+          }
+        },
+        "threeQuarter": {
+          "src": "/characters/graduation/orientation/threeQuarter.png",
+          "w": 174,
+          "h": 449,
+          "baseline": 448,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9977728285077951
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 491,
+            "y": 14
+          }
+        },
+        "side": {
+          "src": "/characters/graduation/orientation/side.png",
+          "w": 132,
+          "h": 447,
+          "baseline": 446,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9977628635346756
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 805,
+            "y": 16
+          }
+        },
+        "back": {
+          "src": "/characters/graduation/orientation/back.png",
+          "w": 194,
+          "h": 449,
+          "baseline": 448,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9977728285077951
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 1131,
+            "y": 14
+          }
+        }
+      },
+      "stance": {
+        "idle": {
+          "src": "/characters/graduation/stance/idle.png",
+          "w": 146,
+          "h": 317,
+          "baseline": 316,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9968454258675079
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 317,
+            "y": 478
+          }
+        },
+        "walk": {
+          "src": "/characters/graduation/stance/walk.png",
+          "w": 203,
+          "h": 317,
+          "baseline": 316,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9968454258675079
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 603,
+            "y": 476
+          }
+        },
+        "run": {
+          "src": "/characters/graduation/stance/run.png",
+          "w": 256,
+          "h": 303,
+          "baseline": 302,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9966996699669967
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 930,
+            "y": 474
+          }
+        }
+      },
+      "expression": {
+        "neutral": {
+          "src": "/characters/graduation/expression/neutral.png",
+          "w": 177,
+          "h": 195,
+          "baseline": 194,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948717948717949
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 126,
+            "y": 805
+          }
+        },
+        "curiosity": {
+          "src": "/characters/graduation/expression/curiosity.png",
+          "w": 172,
+          "h": 194,
+          "baseline": 193,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948453608247423
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 351,
+            "y": 806
+          }
+        },
+        "concentration": {
+          "src": "/characters/graduation/expression/concentration.png",
+          "w": 175,
+          "h": 194,
+          "baseline": 193,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948453608247423
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 557,
+            "y": 806
+          }
+        },
+        "happiness": {
+          "src": "/characters/graduation/expression/happiness.png",
+          "w": 174,
+          "h": 195,
+          "baseline": 194,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948717948717949
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 775,
+            "y": 805
+          }
+        },
+        "determination": {
+          "src": "/characters/graduation/expression/determination.png",
+          "w": 176,
+          "h": 194,
+          "baseline": 193,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948453608247423
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 990,
+            "y": 806
+          }
+        },
+        "wonder": {
+          "src": "/characters/graduation/expression/wonder.png",
+          "w": 174,
+          "h": 194,
+          "baseline": 193,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9948453608247423
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 19_26_07.png",
+            "x": 1214,
+            "y": 806
+          }
+        }
+      }
+    },
+    "epflCurrent": {
+      "label": "ERA_05_EPFL_CURRENT",
+      "ageRange": "20-23",
+      "sources": [
+        "ChatGPT Image 15 août 2026, 17_45_09.png",
+        "ChatGPT Image 15 août 2026, 18_44_42.png"
+      ],
+      "orientation": {
+        "front": {
+          "src": "/characters/epflCurrent/orientation/front.png",
+          "w": 196,
+          "h": 537,
+          "baseline": 536,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9981378026070763
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 130,
+            "y": 64
+          }
+        },
+        "threeQuarter": {
+          "src": "/characters/epflCurrent/orientation/threeQuarter.png",
+          "w": 191,
+          "h": 542,
+          "baseline": 541,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9981549815498155
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 495,
+            "y": 64
+          }
+        },
+        "side": {
+          "src": "/characters/epflCurrent/orientation/side.png",
+          "w": 144,
+          "h": 535,
+          "baseline": 534,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9981308411214953
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 865,
+            "y": 64
+          }
+        },
+        "back": {
+          "src": "/characters/epflCurrent/orientation/back.png",
+          "w": 194,
+          "h": 538,
+          "baseline": 537,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9981412639405205
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 1205,
+            "y": 64
+          }
+        }
+      },
+      "stance": {
+        "idle": {
+          "src": "/characters/epflCurrent/stance/idle.png",
+          "w": 165,
+          "h": 361,
+          "baseline": 360,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.997229916897507
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 286,
+            "y": 660
+          }
+        },
+        "walk": {
+          "src": "/characters/epflCurrent/stance/walk.png",
+          "w": 217,
+          "h": 362,
+          "baseline": 361,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9972375690607734
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 620,
+            "y": 660
+          }
+        },
+        "run": {
+          "src": "/characters/epflCurrent/stance/run.png",
+          "w": 303,
+          "h": 357,
+          "baseline": 356,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9971988795518207
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 17_45_09.png",
+            "x": 967,
+            "y": 664
+          }
+        }
+      },
+      "expression": {
+        "neutral": {
+          "src": "/characters/epflCurrent/expression/neutral.png",
+          "w": 338,
+          "h": 496,
+          "baseline": 494,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9959677419354839
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 14,
+            "y": 95
+          }
+        },
+        "curiosity": {
+          "src": "/characters/epflCurrent/expression/curiosity.png",
+          "w": 337,
+          "h": 494,
+          "baseline": 492,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9959514170040485
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 388,
+            "y": 97
+          }
+        },
+        "concentration": {
+          "src": "/characters/epflCurrent/expression/concentration.png",
+          "w": 327,
+          "h": 490,
+          "baseline": 488,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9959183673469387
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 755,
+            "y": 101
+          }
+        },
+        "happiness": {
+          "src": "/characters/epflCurrent/expression/happiness.png",
+          "w": 332,
+          "h": 497,
+          "baseline": 495,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9959758551307847
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 1111,
+            "y": 94
+          }
+        },
+        "determination": {
+          "src": "/characters/epflCurrent/expression/determination.png",
+          "w": 327,
+          "h": 492,
+          "baseline": 490,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9959349593495935
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 1479,
+            "y": 99
+          }
+        },
+        "wonder": {
+          "src": "/characters/epflCurrent/expression/wonder.png",
+          "w": 325,
+          "h": 496,
+          "baseline": 495,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9979838709677419
+          },
+          "source": {
+            "sheet": "ChatGPT Image 15 août 2026, 18_44_42.png",
+            "x": 1835,
+            "y": 97
+          }
+        }
+      }
+    }
+  }
+}
