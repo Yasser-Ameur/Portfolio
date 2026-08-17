@@ -1,127 +1,58 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Geist_Mono, Inter } from "next/font/google";
-import { Hud } from "@/components/navigation/hud";
-import { SceneTransitionProvider } from "@/components/navigation/scene-transition-provider";
-import { SkipLink } from "@/components/navigation/skip-link";
+import { Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const instrument = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-instrument",
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const SITE = "https://yasserameur.me";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yasserameur.me"),
-  title: {
-    default: "Yasser Ameur — Computer Science @ EPFL",
-    template: "%s — Yasser Ameur",
-  },
+  metadataBase: new URL(SITE),
+  title: "Yasser Ameur",
   description:
-    "Yasser Ameur is a Computer Science student at EPFL building distributed systems, backend infrastructure, machine learning applications, and agentic AI systems.",
-  keywords: [
-    "Yasser Ameur",
-    "EPFL",
-    "Computer Science",
-    "Distributed Systems",
-    "Backend Engineering",
-    "Machine Learning",
-    "Information Retrieval",
-    "Agentic AI",
-    "Software Engineer",
-  ],
-  authors: [{ name: "Yasser Ameur" }],
-  creator: "Yasser Ameur",
-  alternates: {
-    canonical: "/",
-  },
+    "An interactive walk through a life — from a yard in Morocco to engineering at EPFL, and onward. Software engineer, distributed systems, and things still being built.",
+  alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
-    url: "https://yasserameur.me",
-    siteName: "Yasser Ameur",
-    title: "Yasser Ameur — Computer Science @ EPFL",
+    title: "Yasser Ameur",
     description:
-      "Yasser Ameur is a Computer Science student at EPFL building distributed systems, backend infrastructure, machine learning applications, and agentic AI systems.",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Yasser Ameur — Computer Science @ EPFL",
-      },
-    ],
+      "An interactive walk through a life — from a yard in Morocco to engineering at EPFL, and onward.",
+    url: SITE,
+    siteName: "Yasser Ameur",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yasser Ameur — Computer Science @ EPFL",
-    description:
-      "Yasser Ameur is a Computer Science student at EPFL building distributed systems, backend infrastructure, machine learning applications, and agentic AI systems.",
-    images: ["/og.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
+    title: "Yasser Ameur",
+    description: "An interactive walk through a life.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#03050b",
-  colorScheme: "dark",
+  themeColor: "#05070b",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-background text-foreground">
-        <SkipLink />
-        <Hud />
-        <main id="main" className="relative min-h-full">
-          <SceneTransitionProvider>{children}</SceneTransitionProvider>
-        </main>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Yasser Ameur",
-              url: "https://yasserameur.me",
-              jobTitle: "Computer Science Student",
-              alumniOf: {
-                "@type": "CollegeOrUniversity",
-                name: "École Polytechnique Fédérale de Lausanne",
-              },
-              knowsAbout: [
-                "Distributed Systems",
-                "Backend Engineering",
-                "Machine Learning",
-                "Information Retrieval",
-                "Agentic AI",
-                "Systems Architecture",
-              ],
-              sameAs: [
-                "https://github.com/Yasser-Ameur",
-                "https://linkedin.com/in/yasser-ameur",
-              ],
-            }),
-          }}
-        />
-      </body>
+    <html lang="en" className={`${instrument.variable} ${jetbrains.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

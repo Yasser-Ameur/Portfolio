@@ -1,5 +1,5 @@
-import { HomeWorld } from "@/components/home/home-world";
+import { Slice } from "@/world/slice";
 
-export default function Home() {
-  return <HomeWorld />;
+export default function Page() {
+  return <Slice />;
 }
