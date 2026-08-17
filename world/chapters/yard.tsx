@@ -317,7 +317,6 @@ export const yard: Chapter = {
       id: "yard-arrive",
       at: 240,
       run: (c) => {
-        c.caption({ label: "Morocco · 2010", hold: 4200 });
         c.character.express("curious", 0.5);
       },
     },
@@ -345,9 +344,6 @@ export const yard: Chapter = {
         // She is in the doorway. Not introduced — just where the warmth is.
         placeMother(DOOR_X + 58, { look: -1, sway: 0 });
         await c.wait(2600);
-
-        c.caption({ label: "the television was always on", hold: 3400 });
-        await c.waitForInput(3600);
 
         c.camera.release();
         c.character.express("curious", 0.6);

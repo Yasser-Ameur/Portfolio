@@ -202,8 +202,6 @@ export const arrival: Chapter = {
         // Pull back and look up. He is small here, and that is the point.
         c.camera.apply({ zoom: 0.86, y: -70, lead: 0.3, duration: 3.4 });
         await c.wait(3200);
-        c.caption({ label: "Lausanne", line: "Everything is bigger now.", hold: 5000 });
-        await c.waitForInput(5200);
         c.camera.release();
         c.character.express("curious", 0.7);
         c.character.resume();
@@ -215,7 +213,7 @@ export const arrival: Chapter = {
       run: async (c) => {
         c.character.express("calm", 0.6);
         c.caption({
-          line: "The journey keeps going.",
+          line: "Still walking.",
           hold: 6000,
         });
         await c.wait(6200);

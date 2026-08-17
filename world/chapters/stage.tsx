@@ -256,9 +256,6 @@ export const stage: Chapter = {
         c.camera.apply({ hold: null, zoom: 1.1, duration: 1.8 });
         await c.wait(1500);
 
-        c.caption({ label: "Valedictorian.", hold: 4000 });
-        await c.waitForInput(4200);
-
         c.camera.release();
         c.character.express("joy", 0.5);
         c.character.resume();

@@ -99,7 +99,6 @@ export const crossing: Chapter = {
         c.character.express("wonder", 0.7);
         c.camera.apply({ zoom: 0.94, y: -60, duration: 3.2 });
         await c.wait(2400);
-        c.caption({ label: "one suitcase", hold: 3600 });
         await c.wait(3800);
         c.camera.release();
         c.character.express("curious", 0.5);

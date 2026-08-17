@@ -178,7 +178,7 @@ export const goodbye: Chapter = {
 
         // The camera stays on him. She leaves the frame by herself.
         await c.wait(600);
-        c.caption({ label: "2022", hold: 3200 });
+        c.caption({ line: "Everything I knew fit into one bag.", hold: 3200 });
       },
     },
   ],

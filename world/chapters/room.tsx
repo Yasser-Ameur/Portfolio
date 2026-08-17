@@ -243,7 +243,7 @@ export const room: Chapter = {
         c.character.express("wonder", 1);
         await c.wait(1400);
         c.caption({
-          line: "The first thing I wanted to make was a game.",
+          line: "Then I wanted to know how it worked.",
           hold: 5200,
         });
         await c.waitForInput(5400);
