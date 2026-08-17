@@ -1,112 +1,67 @@
-# Yasser Ameur — Portfolio
+# yasserameur.me
 
-An interactive, game-inspired personal website for [yasserameur.me](https://yasserameur.me).
+An interactive autobiography. Not a portfolio site with a hero section — a
+continuous world you walk through, from a yard in Morocco to engineering at
+EPFL, and onward.
 
-This is not a typical developer portfolio. Visitors enter a cinematic, atmospheric
-representation of a personal world — a night landscape under stars — and explore a
-story and an engineering body of work through interactive experiences: a
-side-scrolling life story, a project world made of living systems, and quiet
-editorial spaces for about, resume, and contact.
+The design is documented before it is built:
 
-## Concept
+| Document | What it covers |
+|----------|----------------|
+| [docs/01-NARRATIVE.md](docs/01-NARRATIVE.md) | Chapters, environments, transitions, memory dives, recurring motifs, text policy |
+| [docs/02-VISUAL.md](docs/02-VISUAL.md) | Art direction, palettes, atmospheric depth, the character rig, camera, lighting, typography, sound |
+| [docs/03-TECHNICAL.md](docs/03-TECHNICAL.md) | Rendering, coordinate system, the frame loop, state, chapter virtualisation, performance, accessibility |
 
-- **Home world** — a title screen that behaves like the opening of a small indie
-  game: night sky, stars, parallax, a character seen from behind, stargazing.
-  The main menu lives inside the scene, not on top of it.
-- **Story world** — a continuous left-to-right journey through a life. The
-  character visibly grows from child to young adult across cinematic milestones:
-  childhood, Marrakech, discovering programming, high school, the flight to
-  Switzerland, EPFL, and the Swiss mountains.
-- **Project world** — projects presented as connected systems rather than a grid.
-  Each flagship project gets its own visual metaphor (a distributed node graph, a
-  delivery pipeline, an agent constellation, an event stream, an orchestration
-  graph) plus a detail view for the technically curious.
+## The shape of it
 
-## Design philosophy
+Two layers, and that is the whole interaction model:
 
-- Cinematic, atmospheric, nostalgic, sophisticated, game-like.
-- Restrained palette: deep night tones, warm starlight, a single amber accent.
-  The environment carries the richness; the UI stays quiet.
-- Motion has hierarchy: the world breathes slowly, interactions respond quickly,
-  and scene transitions are deliberate.
-- Progressive disclosure: hover reveals, environmental clues, and detail views —
-  but navigation is never hidden.
-- Accessibility and performance are not optional layers: reduced motion, keyboard
-  navigation, mobile support, and graceful fallbacks are first-class.
+- **The Path** — one continuous horizontal world, 28,400 design units wide. He
+  walks it. The camera follows. Roughly three minutes end to end, and a casual
+  visitor understands the story without reading much of anything.
+- **The Dives** — openings in the scenery you can step into. Different
+  environment, different light, and — where relevant — the real engineering.
+  Nothing in a Dive is required; everything in one rewards curiosity.
 
-## Stack
-
-- **Next.js 16** (App Router, React 19, TypeScript)
-- **Tailwind CSS v4** with a custom design-token system
-- **Motion** (Framer Motion) for interface transitions
-- **Canvas** for the procedural world layers (stars, parallax, particles)
-- **SVG** for the character, props, and system diagrams
-
-## Architecture
-
-```
-app/               routes, root layout, global metadata
-  page.tsx         home world
-  story/           story world
-  projects/        project world + detail routes
-  about/           about
-  resume/          resume
-
-components/
-  home/            title scene, menu
-  story/           story engine + milestone scenes
-  projects/        project world + per-project visualizers
-  navigation/      HUD, escape-hatch home control
-  ui/              generic UI primitives (Button, …)
-  world/           shared world/rendering primitives
-  effects/         particles, transitions, starfield
-
-content/
-  projects/        structured project data
-
-lib/
-  utils.ts         cn() helper
-  animation/       shared easing / motion primitives
-
-styles/            token reference, non-Tailwind CSS
-docs/ROADMAP.md    phased development plan
-```
-
-## Content model
-
-Projects and story milestones live in structured data, not deep inside React
-components. Each project declares a slug, name, tagline, description,
-technologies, GitHub URL, featured status, and a `worldType` that selects its
-visualizer. Adding a project means adding data plus (optionally) a world
-renderer — the shell stays untouched.
-
-## Asset strategy
-
-All artwork is original: procedural canvas, custom SVG silhouettes, and CSS.
-No copyrighted game assets, no random downloaded imagery. Placeholder scenes are
-generated programmatically.
-
-## Development
+## Running it
 
 ```bash
-npm install
-npm run dev      # http://localhost:3000
-npm run lint
-npm run build
-npm run start
+npm run dev
 ```
 
-## Deployment
+`?motion=full` or `?motion=reduced` overrides the OS reduced-motion setting.
+[`/journey`](app/journey/page.tsx) is the whole story as text — a real page, and
+the accessibility contract for the experience.
 
-Production target: **yasserameur.me**. The app is a standard static-capable
-Next.js build — any Next.js host (Vercel, Netlify, a container on a VPS) works.
-SEO metadata, canonical URL, sitemap, robots, and structured data are configured
-in the app.
+## How it is built
 
-## Roadmap
+Next.js 16 · React 19 · TypeScript · Tailwind v4 · static export.
 
-See [docs/ROADMAP.md](docs/ROADMAP.md) for the phased plan and current status.
+Everything visual is authored in code. There are no sprite sheets, no image
+assets, and no audio files — the world is SVG geometry recoloured per chapter,
+one canvas for particles, and procedural WebAudio. That is not a constraint
+worked around; it is what makes continuous character growth, per-chapter
+relighting, and the Pattern Layer possible at all.
 
----
+One `requestAnimationFrame` loop owns every per-frame update and writes to refs
+and CSS custom properties, so travelling costs **zero React renders**.
 
-© Yasser Ameur
+```
+app/          routes, fonts, global styles
+engine/       clock, camera, input, store, director, audio, space
+world/        palettes, depth, props, chapters, HUD
+character/    the rig, expressions, the two figures
+content/      repo-verified project facts
+docs/         the three design documents
+```
+
+## Status
+
+The vertical slice runs: `threshold → yard → room → school → stage → goodbye →
+crossing → arrival`. The chapters after Lausanne — the Loop, the Rewiring, the
+projects, the Alps, the present — are designed in
+[docs/01-NARRATIVE.md](docs/01-NARRATIVE.md) and not yet built.
+
+Every technical claim about the projects comes from
+[`content/projects/index.ts`](content/projects/index.ts), which is grounded in
+the actual repositories. No invented benchmarks.
