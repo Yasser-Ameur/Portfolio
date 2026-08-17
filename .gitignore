@@ -44,3 +44,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated assets (character extraction, environment panels)
+/public/characters
+/public/env
+/character/manifest.generated.ts
+
+# generated screenshots and sequences
+/shots
+/shots2
+/shots3
+/shots4
+/refshots
+/seq1
+/seq2
+/seq3
+/seq4
+/seq5
+/seq6
+/seq7
+
+# AI-generated reference images
+ChatGPT Image*
+
+# local tool config
+/.claude
